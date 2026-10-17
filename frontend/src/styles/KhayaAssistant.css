@@ -1,0 +1,67 @@
+.khaya-assistant {
+  --assistant-ink: #183b4b;
+  --assistant-muted: #536b78;
+  --assistant-line: #d7e3e8;
+  --assistant-user: #dcebff;
+  --assistant-bot: #ddf6e8;
+  --assistant-suggested: #f0e3ff;
+  --assistant-highlight: #fff0c2;
+  --assistant-coral: #ffe2e8;
+  position: fixed;
+  z-index: 50;
+  right: 24px;
+  bottom: 22px;
+  color: var(--assistant-ink);
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.khaya-assistant button,
+.khaya-assistant input { font: inherit; }
+.khaya-assistant button { color: inherit; }
+.khaya-assistant button:focus-visible,
+.khaya-assistant input:focus-visible { outline: 3px solid #326fa3; outline-offset: 2px; }
+.khaya-assistant-launcher { display: inline-flex; align-items: center; gap: 9px; min-height: 50px; padding: 0 18px; border: 1px solid #14566a; border-radius: 28px; background: #14566a; color: #fff !important; font-weight: 750 !important; box-shadow: 0 8px 24px #183b4b35; cursor: pointer; }
+.khaya-assistant-launcher:hover { background: #0e4557; transform: translateY(-1px); }
+.khaya-assistant-window { display: flex; flex-direction: column; width: min(410px, calc(100vw - 32px)); height: min(620px, calc(100dvh - 40px)); overflow: hidden; border: 1px solid var(--assistant-line); border-radius: 20px; background: #fffdfa; box-shadow: 0 18px 50px #183b4b35; }
+.khaya-assistant-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 15px 16px; background: linear-gradient(115deg, #dcebff 0%, #ddf6e8 100%); border-bottom: 1px solid var(--assistant-line); }
+.khaya-assistant-brand { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.khaya-assistant-brand > div { display: grid; gap: 2px; }
+.khaya-assistant-brand strong { color: var(--assistant-ink); font-size: 15px; }
+.khaya-assistant-brand small { color: var(--assistant-muted); }
+.khaya-assistant-mark { display: grid; place-items: center; flex: 0 0 36px; height: 36px; border-radius: 12px; background: #fff0c2; color: #735c16; }
+.khaya-assistant-icon-button { display: grid; place-items: center; flex: 0 0 38px; height: 38px; border: 1px solid #ffffffc9; border-radius: 12px; background: #ffffffc9; cursor: pointer; }
+.khaya-assistant-messages { display: flex; flex: 1; flex-direction: column; gap: 12px; overflow-y: auto; padding: 16px; overscroll-behavior: contain; }
+.khaya-assistant-message { max-width: 94%; padding: 12px 13px; border: 1px solid transparent; border-radius: 15px; line-height: 1.5; overflow-wrap: anywhere; }
+.khaya-assistant-message p { margin: 0; white-space: pre-wrap; }
+.khaya-assistant-message.bot { align-self: flex-start; background: var(--assistant-bot); border-color: #bce8ce; border-bottom-left-radius: 5px; }
+.khaya-assistant-message.user { align-self: flex-end; background: var(--assistant-user); border-color: #c6dcfa; border-bottom-right-radius: 5px; }
+.khaya-assistant-feedback { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; margin-top: 9px; color: var(--assistant-muted); font-size: 12px; }
+.khaya-assistant-feedback button { display: grid; place-items: center; width: 28px; height: 28px; border: 1px solid var(--assistant-line); border-radius: 9px; background: #fff; cursor: pointer; }
+.khaya-assistant-feedback button[aria-pressed="true"] { background: var(--assistant-highlight); border-color: #ddc56f; }
+.khaya-assistant-suggestions { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+.khaya-assistant-suggestions button { max-width: 100%; padding: 7px 10px; border: 1px solid #dfcef1; border-radius: 13px; background: var(--assistant-suggested); text-align: left; line-height: 1.35; cursor: pointer; }
+.khaya-assistant-suggestions button:hover { border-color: #b99bd4; background: #e8d5fa; }
+.khaya-assistant-message.bot:nth-child(4n + 1) { --assistant-bot: #ddf6e8; }
+.khaya-assistant-form { display: flex; align-items: center; gap: 8px; padding: 12px 14px; border-top: 1px solid var(--assistant-line); background: #fff; }
+.khaya-assistant-form input { flex: 1; min-width: 0; min-height: 44px; padding: 10px 12px; border: 1px solid #c9d8df; border-radius: 12px; background: #fff; color: var(--assistant-ink); }
+.khaya-assistant-form button { display: grid; place-items: center; flex: 0 0 44px; height: 44px; border: 0; border-radius: 12px; background: #14566a; color: #fff !important; cursor: pointer; }
+.khaya-assistant-form button:hover { background: #0e4557; }
+.khaya-assistant-actions { display: flex; flex-wrap: wrap; gap: 6px; padding: 0 14px 13px; background: #fff; }
+.khaya-assistant-actions button { min-height: 32px; padding: 5px 8px; border: 1px solid var(--assistant-line); border-radius: 9px; background: #fff; color: var(--assistant-ink); font-size: 11px; cursor: pointer; }
+.khaya-assistant-actions button:hover { background: var(--assistant-coral); border-color: #efbdc7; }
+.khaya-assistant .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.khaya-assistant.is-large-text { font-size: 16px; }
+.khaya-assistant.is-large-text .khaya-assistant-message { line-height: 1.65; }
+.khaya-assistant.is-high-contrast { --assistant-ink: #071b24; --assistant-muted: #263b43; --assistant-line: #596a70; --assistant-bot: #d9f5e5; --assistant-user: #d7e8ff; --assistant-suggested: #ead7ff; }
+.khaya-assistant.is-high-contrast .khaya-assistant-message { border-color: #52636a; }
+.khaya-assistant.is-high-contrast .khaya-assistant-header { background: linear-gradient(115deg, #c6dfff, #c2efd5); }
+
+@media (max-width: 560px) {
+  .khaya-assistant { right: 12px; bottom: 12px; }
+  .khaya-assistant-window { width: min(410px, calc(100vw - 24px)); height: min(690px, calc(100dvh - 24px)); border-radius: 17px; }
+  .khaya-assistant-launcher { min-height: 46px; padding: 0 15px; }
+  .khaya-assistant-header { padding: 12px; }
+  .khaya-assistant-messages { padding: 12px; }
+  .khaya-assistant-actions { padding: 0 10px 10px; }
+}

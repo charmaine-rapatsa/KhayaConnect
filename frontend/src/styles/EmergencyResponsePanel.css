@@ -1,0 +1,31 @@
+.kc-emergency-panel { display: grid; gap: 14px; margin-top: 18px; }
+.kc-emergency-panel-heading, .kc-emergency-panel-heading > div { display: flex; align-items: center; gap: 10px; }
+.kc-emergency-panel-heading { justify-content: space-between; }
+.kc-emergency-panel-heading h3 { margin: 0; font-size: 1.05rem; }
+.kc-emergency-panel-heading > button, .kc-emergency-action-form button { min-height: 36px; border: 1px solid #c7d8df; border-radius: 8px; background: #fff; color: #123047; padding: 7px 11px; font: inherit; font-weight: 650; cursor: pointer; }
+.kc-emergency-panel-heading > button { display: inline-flex; align-items: center; gap: 7px; }
+.kc-emergency-list { display: grid; gap: 12px; }
+.kc-emergency-card { display: grid; gap: 10px; padding: 16px; border: 1px solid #e2d9d1; border-radius: 12px; background: #fff; }
+.kc-emergency-card-heading { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.kc-emergency-card-heading > div { display: grid; gap: 3px; }
+.kc-emergency-card-heading time, .kc-emergency-message { color: #647783; font-size: .92rem; }
+.kc-emergency-status { border-radius: 999px; padding: 4px 9px; font-size: .8rem; font-weight: 700; text-transform: capitalize; }
+.kc-emergency-status.open { color: #9b2929; background: #fff0ef; }
+.kc-emergency-status.closed { color: #28634b; background: #eaf6ef; }
+.kc-emergency-notes { margin: 0; color: #445963; }
+.kc-emergency-responses { margin: 0; padding-left: 22px; color: #445963; }
+.kc-emergency-action-form { display: grid; gap: 8px; }
+.kc-emergency-action-form label { font-weight: 650; }
+.kc-emergency-action-form textarea { width: 100%; min-height: 68px; resize: vertical; border: 1px solid #c7d8df; border-radius: 8px; padding: 9px 11px; color: #123047; font: inherit; }
+.kc-emergency-action-form > div { display: flex; flex-wrap: wrap; gap: 8px; }
+.kc-emergency-action-form button:disabled { opacity: .6; cursor: wait; }
+.kc-emergency-panel button:focus-visible, .kc-emergency-action-form textarea:focus-visible { outline: 3px solid #48aab2; outline-offset: 2px; }
+.kc-emergency-error { margin: 0; color: #9b2929; }
+.kc-emergency-message { margin: 0; }
+.kc-risk-alerts { display: grid; gap: 12px; margin-top: 10px; }
+.kc-risk-alerts > header { display: flex; align-items: center; gap: 9px; color: #123047; }
+.kc-risk-alerts > header h3 { margin: 0; font-size: 1rem; }
+.kc-risk-alerts > header span { margin-left: auto; border-radius: 999px; padding: 3px 9px; background: #eef4f5; color: #34515d; font-size: .82rem; font-weight: 750; }
+.kc-risk-card { border-left: 3px solid #d48a1d; }
+.kc-risk-card small { color: #647783; }
+@media (max-width: 520px) { .kc-emergency-card-heading { flex-direction: column; } }

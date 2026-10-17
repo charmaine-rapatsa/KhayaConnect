@@ -1,0 +1,48 @@
+.login-feedback {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  margin: 12px 0;
+  padding: 11px 13px;
+  border: 1px solid currentColor;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.login-feedback::before {
+  flex: 0 0 auto;
+  font-weight: 800;
+}
+
+.login-feedback.error {
+  color: #84251e;
+  background: #fff1ef;
+}
+
+.login-feedback.error::before {
+  content: "!";
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  font-size: 13px;
+}
+
+.login-feedback.success {
+  color: #145b3a;
+  background: #eaf8ef;
+}
+
+.login-feedback.success::before {
+  content: "✓";
+  font-size: 18px;
+}
+
+.login-feedback:focus-visible {
+  outline: 3px solid #17637a;
+  outline-offset: 3px;
+}

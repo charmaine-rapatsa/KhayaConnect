@@ -1,0 +1,542 @@
+* {
+  box-sizing: border-box;
+}
+
+.admin-login-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  background: #f7f1eb;
+  overflow: hidden;
+  position: relative;
+}
+
+
+/* =========================
+   BACK BUTTON
+   ========================= */
+
+.admin-back-button {
+  position: absolute;
+  left: 28px;
+  bottom: 24px;
+  z-index: 30;
+
+  border: none;
+  background: transparent;
+
+  color: #164e63;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+  padding: 10px 14px;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-back-button:hover {
+  color: #123047;
+}
+
+
+/* =========================
+   LEFT STUDIO SECTION
+   ========================= */
+
+.admin-login-welcome {
+  width: 48%;
+  min-height: 100vh;
+
+  position: relative;
+  overflow: hidden;
+
+  padding: 60px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-image: url("../assets/studio-background.png");
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* =========================
+   STUDIO OVERLAY
+   ========================= */
+
+.admin-login-welcome::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(211, 182, 156, 0.82),
+      rgba(211, 182, 156, 0.45)
+    );
+
+  z-index: 1;
+}
+
+
+/* =========================
+   LEFT CONTENT
+   ========================= */
+
+.admin-login-content {
+  position: relative;
+  z-index: 5;
+
+  max-width: 500px;
+}
+
+.admin-login-brand {
+  margin: 0 0 20px;
+
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 5px;
+
+  color: #164e63;
+}
+
+.admin-login-welcome h1 {
+  margin: 0;
+
+  font-size: 52px;
+  line-height: 1.08;
+
+  color: #123047;
+}
+
+.admin-login-message {
+  max-width: 430px;
+
+  margin: 22px 0 0;
+
+  font-size: 18px;
+  line-height: 1.6;
+
+  color: #31566b;
+}
+
+
+/* =========================
+   ADMINISTRATOR CHARACTER
+   ========================= */
+
+.admin-login-character {
+  position: absolute;
+
+  z-index: 6;
+
+  bottom: -25px;
+  right: 35px;
+
+  width: 300px;
+  height: 390px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.admin-login-character img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  object-position: center bottom;
+
+  display: block;
+
+  filter:
+    drop-shadow(
+      0 12px 12px rgba(18, 48, 71, 0.12)
+    );
+}
+
+
+/* =========================
+   RIGHT FORM SECTION
+   ========================= */
+
+.admin-login-form-section {
+  width: 52%;
+  min-height: 100vh;
+
+  padding: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f7f1eb;
+}
+
+
+/* =========================
+   LOGIN CARD
+   ========================= */
+
+.admin-login-card {
+  width: 100%;
+  max-width: 470px;
+
+  padding: 45px;
+
+  background: white;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 15px 45px rgba(18, 48, 71, 0.10);
+}
+
+
+/* =========================
+   ROLE LABEL
+   ========================= */
+
+.admin-login-role {
+  margin: 0 0 10px;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #164e63;
+}
+
+
+/* =========================
+   HEADINGS
+   ========================= */
+
+.admin-login-card h2 {
+  margin: 0;
+
+  font-size: 38px;
+  line-height: 1.15;
+
+  color: #123047;
+}
+
+.admin-login-subtitle {
+  margin: 10px 0 30px;
+
+  font-size: 16px;
+  line-height: 1.5;
+
+  color: #31566b;
+}
+
+
+/* =========================
+   FORM GROUP
+   ========================= */
+
+.admin-form-group {
+  margin-bottom: 22px;
+}
+
+.admin-form-group label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  color: #123047;
+}
+
+
+/* =========================
+   INPUTS
+   ========================= */
+
+.admin-form-group input {
+  width: 100%;
+  min-height: 56px;
+
+  padding: 14px 16px;
+
+  border: 2px solid #d9e1e5;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  color: #123047;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-form-group input::placeholder {
+  color: #8a9aa3;
+}
+
+.admin-form-group input:focus {
+  border-color: #164e63;
+
+  box-shadow:
+    0 0 0 3px rgba(22, 78, 99, 0.10);
+}
+
+
+/* =========================
+   PASSWORD
+   ========================= */
+
+.admin-password-wrapper {
+  position: relative;
+}
+
+.admin-password-wrapper input {
+  padding-right: 80px;
+}
+
+.admin-password-toggle {
+  position: absolute;
+
+  right: 12px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  border: none;
+  background: transparent;
+
+  color: #164e63;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  padding: 8px;
+}
+
+
+/* =========================
+   FORGOT PASSWORD
+   ========================= */
+
+.admin-forgot-password {
+  display: block;
+
+  margin: 2px 0 24px;
+
+  padding: 0;
+
+  border: none;
+  background: none;
+
+  color: #164e63;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  text-align: left;
+}
+
+.admin-forgot-password:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+   ========================= */
+
+.admin-login-button {
+  width: 100%;
+  min-height: 58px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: #164e63;
+
+  color: white;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(22, 78, 99, 0.18);
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-login-button:hover {
+  background: #123f50;
+
+  box-shadow:
+    0 10px 24px rgba(22, 78, 99, 0.24);
+}
+
+
+/* =========================
+   VOICE HELP
+   ========================= */
+
+.admin-help-button {
+  width: 100%;
+  min-height: 52px;
+
+  margin-top: 14px;
+
+  border: 2px solid #d9e1e5;
+  border-radius: 14px;
+
+  background: white;
+
+  color: #164e63;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-help-button:hover {
+  background: #f5f9fa;
+
+  border-color: #164e63;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 1000px) {
+
+  .admin-login-welcome {
+    width: 42%;
+    padding: 40px;
+  }
+
+  .admin-login-welcome h1 {
+    font-size: 42px;
+  }
+
+  .admin-login-character {
+    width: 250px;
+    height: 330px;
+    right: 10px;
+  }
+
+  .admin-login-form-section {
+    width: 58%;
+    padding: 35px 25px;
+  }
+
+  .admin-login-card {
+    padding: 35px;
+  }
+
+  .admin-back-button {
+    left: 18px;
+    bottom: 18px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 750px) {
+
+  .admin-login-page {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .admin-login-welcome {
+    width: 100%;
+    min-height: 360px;
+
+    padding: 40px;
+
+    justify-content: flex-start;
+
+    background-position: center;
+  }
+
+  .admin-login-welcome h1 {
+    font-size: 38px;
+  }
+
+  .admin-login-message {
+    max-width: 350px;
+    font-size: 16px;
+  }
+
+  .admin-login-character {
+    width: 190px;
+    height: 250px;
+
+    right: 10px;
+    bottom: -10px;
+  }
+
+  .admin-login-form-section {
+    width: 100%;
+    min-height: auto;
+
+    padding: 30px 20px 90px;
+  }
+
+  .admin-login-card {
+    max-width: 500px;
+    padding: 30px 25px;
+  }
+
+  .admin-back-button {
+    position: fixed;
+
+    left: 16px;
+    bottom: 16px;
+
+    padding: 10px 12px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-radius: 10px;
+
+    box-shadow:
+      0 4px 15px rgba(18, 48, 71, 0.10);
+  }
+}
+.admin-login-error { margin: 8px 0; color: #a12622; font-size: 14px; }

@@ -1,0 +1,47 @@
+:root {
+  --kc-primary: #164e63;
+  --kc-primary-hover: #123f51;
+  --kc-sidebar: #123047;
+  --kc-background: #f7f1eb;
+  --kc-surface: #ffffff;
+  --kc-text: #123047;
+  --kc-muted: #71818b;
+  --kc-border: #e2d9d1;
+  --kc-focus: #58a7b8;
+  --kc-success: #287354;
+  --kc-warning: #8a5b12;
+  --kc-error: #a53737;
+  --kc-emergency: #a51f2b;
+}
+
+:is(.elderly-dashboard, .family-dashboard-page, .chw-dashboard-page, .clinic-dashboard, .admin-dashboard) {
+  --kc-action-primary: var(--kc-primary);
+  --kc-action-hover: var(--kc-primary-hover);
+}
+
+:is(.elderly-dashboard, .family-dashboard-page, .chw-dashboard-page, .clinic-dashboard, .admin-dashboard) button,
+:is(.elderly-dashboard, .family-dashboard-page, .chw-dashboard-page, .clinic-dashboard, .admin-dashboard) a[role="button"] {
+  font-family: inherit;
+}
+
+:is(.elderly-dashboard, .family-dashboard-page, .chw-dashboard-page, .clinic-dashboard, .admin-dashboard) button:not(:disabled) {
+  cursor: pointer;
+}
+
+:is(.elderly-dashboard, .family-dashboard-page, .chw-dashboard-page, .clinic-dashboard, .admin-dashboard) :is(button, a[role="button"]):focus-visible {
+  outline: 3px solid var(--kc-focus);
+  outline-offset: 2px;
+}
+
+:is(.elderly-dashboard, .family-dashboard-page, .chw-dashboard-page, .clinic-dashboard, .admin-dashboard) button:disabled {
+  cursor: not-allowed;
+  opacity: .58;
+}
+
+:is(.elderly-dashboard, .family-dashboard-page, .chw-dashboard-page, .clinic-dashboard, .admin-dashboard) :is(.admin-primary-button, .chw-primary-button, .clinic-primary-button, .family-primary-button, .elderly-primary-button) {
+  background-color: var(--kc-action-primary);
+}
+
+:is(.elderly-dashboard, .family-dashboard-page, .chw-dashboard-page, .clinic-dashboard, .admin-dashboard) :is(.admin-primary-button, .chw-primary-button, .clinic-primary-button, .family-primary-button, .elderly-primary-button):hover:not(:disabled) {
+  background-color: var(--kc-action-hover);
+}
