@@ -9,6 +9,26 @@ KhayaConnect brings older adults, families, community health workers (CHWs), cli
 - Shared care-team workflows, relationship management, and in-app notifications.
 - A responsive web interface backed by a Django REST API.
 
+## Screenshots
+
+Explore the KhayaConnect experience across role selection, older adult care, and family coordination.
+
+### Choose your care role
+
+![KhayaConnect role selection screen](docs/screenshots/role-selection.png)
+
+### Older adult dashboard
+
+![KhayaConnect older adult dashboard](docs/screenshots/older-adult-dashboard.png)
+
+### Care calendar
+
+![KhayaConnect older adult calendar](docs/screenshots/older-adult-calendar.png)
+
+### Family care team
+
+![KhayaConnect family care team screen](docs/screenshots/family-care-team.png)
+
 ## Technology
 
 - **Backend:** Python, Django, Django REST Framework
